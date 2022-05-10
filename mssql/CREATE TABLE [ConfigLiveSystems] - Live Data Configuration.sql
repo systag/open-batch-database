@@ -2,7 +2,7 @@ USE [CollectX]
 GO
 
 /****** Delete existing table - uncomment next 2 lines if this is desired. ******/
---DROP TABLE [dbo].[PI_System]
+--DROP TABLE [dbo].[ConfigLiveSystems]
 --GO
 
 /****** Create new empty Table ******/
@@ -12,7 +12,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[PI_System](
+CREATE TABLE [dbo].[ConfigLiveSystems](
 	[SystemKey] [bigint] IDENTITY(1,1) NOT NULL,
 	[SystemDescription] [nvarchar](50) NULL,
 	[SystemEnabled] [bit] NOT NULL,

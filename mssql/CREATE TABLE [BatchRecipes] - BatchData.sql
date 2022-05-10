@@ -2,7 +2,7 @@ USE [CollectX]
 GO
 
 /****** Delete existing table - uncomment next 2 lines if this is desired. ******/
---DROP TABLE [dbo].[BT_Recipe]
+--DROP TABLE [dbo].[BatchRecipes]
 --GO
 
 /****** Create new empty Table ******/
@@ -12,7 +12,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[BT_Recipe](
+CREATE TABLE [dbo].[BatchRecipes](
 	[PrimKey] [bigint] IDENTITY(1,1) NOT NULL,
 	[ComputerName] [nvarchar](255) NULL,
 	[SystemNo] [nvarchar](255) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE [dbo].[BT_Recipe](
 	[ReceipeName] [nvarchar](255) NULL,
 	[done] [bit] NOT NULL default 0,
 
-CONSTRAINT [PK_BT_Recipe] PRIMARY KEY CLUSTERED 
+CONSTRAINT [PK_BatchRecipes] PRIMARY KEY CLUSTERED 
 (
 	[PrimKey] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]

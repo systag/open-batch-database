@@ -2,7 +2,7 @@ USE [CollectX]
 GO
 
 /****** Delete existing table - uncomment next 2 lines if this is desired. ******/
---DROP TABLE [dbo].[PI_Values]
+--DROP TABLE [dbo].[LiveValues]
 --GO
 
 /****** Create new empty Table ******/
@@ -12,7 +12,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[PI_Values](
+CREATE TABLE [dbo].[LiveValues](
 	[ValueKey] [bigint] IDENTITY(1,1) NOT NULL,
 	[SystemKey] [bigint] NOT NULL,
 	[TagKey] [bigint] NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE [dbo].[PI_Values](
 	[Done] [bit] NULL,
 	[WhyThat] [timestamp] NULL,
 
-CONSTRAINT [PK_PI_Values] PRIMARY KEY CLUSTERED 
+CONSTRAINT [PK_LiveValues] PRIMARY KEY CLUSTERED 
 (
 	[ValueKey] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]

@@ -2,7 +2,7 @@ USE [CollectX]
 GO
 
 /****** Delete existing table - uncomment next 2 lines if this is desired. ******/
---DROP TABLE [dbo].[PI_Tags]
+--DROP TABLE [dbo].[ConfigLiveTags]
 --GO
 
 /****** Create new empty Table ******/
@@ -12,7 +12,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[PI_Tags](
+CREATE TABLE [dbo].[ConfigLiveTags](
 	[TagKey] [bigint] IDENTITY(1,1) NOT NULL,
 	[TagName] [nvarchar](50) NOT NULL,
 	[TagDescription] [nvarchar](50) NULL,
@@ -23,7 +23,7 @@ CREATE TABLE [dbo].[PI_Tags](
 	[SystemKey] [bigint] NOT NULL,
 	[WhyThat] [timestamp] NULL,
 
-CONSTRAINT [PK_PI_Tags] PRIMARY KEY CLUSTERED 
+CONSTRAINT [PK_ConfigLiveTags] PRIMARY KEY CLUSTERED 
 (
 	[TagKey] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
